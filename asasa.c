@@ -1,3 +1,6 @@
+//write a program using pointer, to find the the largest element in an array...
+
+
 #include<stdio.h>
 int main()
 {
