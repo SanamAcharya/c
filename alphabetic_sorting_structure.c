@@ -24,9 +24,9 @@ int main()
     }
     for (i=0; i<5; i++)
     {
-        for(j=0; j<5; j++)
+        for(j=i+1; j<5; j++)
         {
-            if (strcmp(d[i].name,d[j].name)<0)
+            if (strcmp(d[i].name,d[j].name)>0)
             {
             strcpy(temp,d[i].name);
             strcpy(d[i].name,d[j].name);

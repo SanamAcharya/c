@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 int main()
 {
 
@@ -14,7 +15,7 @@ int main()
     scanf("%d", &n);
 
     struct detail p[n];
-    int i;
+    int i, j;
     for (i = 0; i < n; i++)
     {
         printf("ENTER NAME:");
@@ -27,12 +28,26 @@ int main()
         scanf("%d", &p[i].runs);
     }
     printf("DATA:\n");
+    char temp[20];
     for (i = 0; i < n; i++)
     {
-        printf("NAME:%s\n",p[i].name);
-        printf("NATION:%s\n",p[i].nation);
-        printf("MATCH:%d\n",p[i].match);
-        printf("RUNS:%d\n",p[i].runs);
+        for (j = i+1; j < n; j++)
+        {
+            if (strcmp(p[i].name, p[j].name) > 0)
+            {
+                strcpy(temp, p[i].name);
+                strcpy(p[i].name, p[j].name);
+                strcpy(p[j].name, temp);
+            }
+        }
+    }
+    for (i = 0; i < n; i++)
+    {
+        printf("NAME:%s\n", p[i].name);
+        printf("NATION:%s\n", p[i].nation);
+        printf("MATCH:%d\n", p[i].match);
+        printf("RUNS:%d\n", p[i].runs);
         printf("\n");
     }
 }
+
