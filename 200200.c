@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -7,8 +7,8 @@
 
 int main()
 {
-    char a[MAX_NUM_STRINGS][MAX_STR_LENGTH];
-    char temp[MAX_STR_LENGTH];
+    char a[10][10];
+    char temp[100];
     int i, j, n;
 
     printf("ENTER THE NUMBER OF STRINGS: ");
@@ -43,3 +43,4 @@ int main()
 
     return 0;
 }
+*/
