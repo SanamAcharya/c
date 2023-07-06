@@ -13,9 +13,9 @@ int main()
     }
     for(i=0; i<10; i++)
 {
-    for(j=0; j<10; j++)
+    for(j=i+1; j<10; j++)
         {
-            if(a[i]>a[j])
+            if(a[i]<a[j])
             {
                 temp=a[i];
                 a[i]=a[j];
